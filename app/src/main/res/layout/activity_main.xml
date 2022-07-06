@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="1920px"
+        android:layout_height="1080px"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <Button
+        android:id="@+id/connectBTN"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#46636363"
+        android:drawableLeft="@drawable/connect"
+        android:padding="40px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
+
+    <Button
+        android:id="@+id/screenshotBTN"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#46636363"
+        android:drawableLeft="@drawable/screenshot"
+        app:layout_constraintEnd_toStartOf="@+id/connectBTN"
+        app:layout_constraintTop_toTopOf="@+id/connectBTN" />
+
+    <Button
+        android:id="@+id/clickBTN"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#46636363"
+        android:drawableLeft="@drawable/click"
+        app:layout_constraintEnd_toStartOf="@+id/doubleClickBTN"
+        app:layout_constraintTop_toBottomOf="@+id/screenshotBTN" />
+
+    <Button
+        android:id="@+id/moveBTN"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#46636363"
+        android:drawableLeft="@drawable/move"
+        app:layout_constraintEnd_toStartOf="@+id/doubleClickBTN"
+        app:layout_constraintTop_toBottomOf="@+id/clickBTN" />
+
+    <Button
+        android:id="@+id/arrowleftBTN"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#46636363"
+        android:drawableLeft="@drawable/arrowleft"
+        app:layout_constraintEnd_toStartOf="@+id/arrowrightBTN"
+        app:layout_constraintTop_toBottomOf="@+id/moveBTN" />
+
+    <Button
+        android:id="@+id/arrowrightBTN"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#46636363"
+        android:drawableLeft="@drawable/arrowright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moveBTN" />
+
+    <Button
+        android:id="@+id/doubleClickBTN"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#46636363"
+        android:drawableLeft="@drawable/doubleclick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screenshotBTN" />
+
+    <TextView
+        android:id="@+id/xAxis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="xAxis"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/yAxis"
+        app:layout_constraintTop_toBottomOf="@+id/enterTextBTN" />
+
+    <TextView
+        android:id="@+id/yAxis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="yAxis"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterTextBTN" />
+
+    <ImageView
+        android:id="@+id/crosshair"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.7"
+        app:srcCompat="@drawable/crosshair" />
+
+    <Button
+        android:id="@+id/screenOneBTN"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#46636363"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/screenTwoBTN"
+        app:layout_constraintTop_toBottomOf="@+id/yAxis" />
+
+    <Button
+        android:id="@+id/screenTwoBTN"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#46636363"
+        android:text="2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/screenThreeBTN"
+        app:layout_constraintTop_toBottomOf="@+id/yAxis" />
+
+    <Button
+        android:id="@+id/screenThreeBTN"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#46636363"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yAxis" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="right"
+        android:text="not connected"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="8dp"
+        android:hint="@string/enter_text"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/enterTextBTN"
+        app:layout_constraintTop_toBottomOf="@+id/arrowleftBTN" />
+
+    <Button
+        android:id="@+id/enterTextBTN"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#46636363"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:textColor="#FFFFFF"
+        android:textSize="54sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrowleftBTN" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
